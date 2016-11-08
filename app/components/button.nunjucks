@@ -1,0 +1,3 @@
+{% macro button(class="govuk-c-button", modifier="govuk-c-button--large", text="Button text") %}
+  <button class="{{ class }} {{ modifier }}">{{ text }}</button>
+{% endmacro %}
