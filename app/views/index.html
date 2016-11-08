@@ -2,6 +2,9 @@
 
 {% block content %}
   <main class="gv-o-wrapper">
-    test index content
+
+    {% import "../components/button.html" as component %}
+    {{ component.button() }}
+
   </main>
 {% endblock %}
