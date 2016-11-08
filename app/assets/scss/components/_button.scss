@@ -139,7 +139,7 @@
   }
 }
 
-.gv-c-button {
+.govuk-c-button {
   @include button ($button-colour);
 
   @include box-sizing (border-box);
