@@ -5,7 +5,7 @@ module GovukFrontendAlpha
   class Engine < ::Rails::Engine
     initializer "govuk_frontend_alpha.assets.precompile" do |app|
       app.config.assets.precompile += %w(
-        main.css
+        govuk-frontend*.css
         govuk-template*.css
         fonts*.css
         govuk-template.js
