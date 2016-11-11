@@ -33,7 +33,8 @@ app.use(function (req, res, next) {
 
 // Render views/index
 app.get('/', function (req, res) {
-  res.render('index')
+  let button = require('./app/fixtures/components/button.json')
+  res.render('index', { button: button })
 })
 
 // Log when app is running

@@ -3,8 +3,9 @@
 {% block content %}
   <main class="gv-o-wrapper">
 
-    {% import "../components/button.html" as component %}
-    {{ component.button() }}
+    {% import "../components/button.nunjucks" as component %}
+
+    {{ component.button(class=button.class, text=button.text, type=button.type) }}
 
   </main>
 {% endblock %}
