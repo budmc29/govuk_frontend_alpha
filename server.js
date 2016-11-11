@@ -34,7 +34,8 @@ app.use(function (req, res, next) {
 // Render views/index
 app.get('/', function (req, res) {
   let button = require('./app/fixtures/components/button.json')
-  res.render('index', { button: button })
+  let buttonPrimary = require('./app/fixtures/components/button-primary.json')
+  res.render('index', { button: button, buttonPrimary: buttonPrimary })
 })
 
 // Log when app is running
