@@ -33,9 +33,10 @@ app.use(function (req, res, next) {
 
 // Render views/index
 app.get('/', function (req, res) {
-  let button = require('./app/fixtures/components/button.json')
-  let buttonPrimary = require('./app/fixtures/components/button-primary.json')
-  res.render('index', { button: button, buttonPrimary: buttonPrimary })
+  let buttonData = require('./app/data/button.js')
+  let buttonPrimaryData = require('./app/data/button-primary.js')
+  let formControlData = require('./app/data/form-control.js')
+  res.render('index', { buttonData: buttonData, buttonPrimaryData: buttonPrimaryData, formControlData: formControlData })
 })
 
 // Log when app is running
