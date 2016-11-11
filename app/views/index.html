@@ -3,11 +3,21 @@
 {% block content %}
   <main class="gv-o-wrapper">
 
-    {% import "../components/button.nunjucks" as component %}
+    {% import "../components/button.nunjucks" as button %}
 
-    {{ component.button(class=button.class, text=button.text, type=button.type) }}
+    <div class="govuk-u-mb-10">
+    {{ button.buttonComponent(class=buttonData.context.class, type=buttonData.context.type, text=buttonData.context.text) }}
+    </div>
 
-    {{ component.button(class=buttonPrimary.class, modifier=buttonPrimary.modifier, text=buttonPrimary.text, type=button.type) }}
+    <div class="govuk-u-mb-10">
+    {{ button.buttonComponent(class=buttonPrimaryData.context.class, type=buttonPrimaryData.context.type, text=buttonPrimaryData.context.text) }}
+    </div>
+
+    {% import "../components/form-control.nunjucks" as formControl %}
+
+    <div class="govuk-u-mb-10">
+    {{ formControl.formControlComponent(class=formControlData.context.class) }}
+    </div>
 
   </main>
 {% endblock %}
